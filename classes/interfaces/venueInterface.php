@@ -1,0 +1,1 @@
+<?phpclass VenueInterface extends BasicInterface {		public function __construct($db = null) {		parent::__construct($db);	}	}VenueInterface::registerInterface();
