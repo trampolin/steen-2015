@@ -1,0 +1,301 @@
+@smallwidth: 630px;
+@contentboxcontainerwidth: (@smallwidth * 8 / 9);
+
+@menuitemcolor: #dddddd;
+
+@bordercolor: #000000;
+
+@linkcolor: #000;
+
+@footerimagewidth: 116px;
+
+@font-face {
+  font-family: "steen";
+  src: url(../fonts/BebasNeueRegular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "steen";
+  font-weight: bold;
+  src: url(../fonts/BebasNeueBold.otf) format("truetype");
+}
+
+div {
+  font-family: "steen";
+  letter-spacing: 0.0625em;
+}
+
+a {
+  text-decoration: none;
+  color: @linkcolor;
+
+  &:visited {
+    text-decoration: none;
+    color: @linkcolor;
+  }
+
+  &:active {
+    color: @linkcolor;
+  }
+}
+
+.b-clear {
+  clear: both;
+}
+
+
+#everything {
+  width: @smallwidth;
+
+  .trenner {
+    .footer_line {
+      width: ((@smallwidth - @footerimagewidth) / 2);
+    }
+  }
+
+}
+
+.round_corners {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+#everything {
+  margin: auto;
+
+  #header {
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    a {
+      display: block;
+      //height: 100%;
+
+      #headerimg {
+        height: 150px;
+      }
+    }
+  }
+
+  #menu {
+    height: 50px;
+    margin-bottom: 15px;
+
+    #menu_container {
+      margin: auto;
+      width: @smallwidth;
+      height: 50px;
+      //border: 1px solid @bordercolor;
+
+      .menu_item {
+        float: left;
+        height: 40px;
+        width: (@smallwidth / 3 - 10);
+        margin: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: @menuitemcolor;
+        //.round_corners;
+        a {
+          display: block;
+          height: 100%;
+          text-decoration: none;
+          line-height: 40px;
+          font-size: 30px;
+          padding-top: 3px;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: (@menuitemcolor - #222);
+        }
+      }
+
+      &:after {
+        clear: both;
+      }
+
+    }
+  }
+
+  #content {
+
+    #current_video {
+      border: 3px solid @bordercolor;
+      width: (@smallwidth - 6);
+      height: (@smallwidth * 9 / 16 - 6);
+      margin-bottom: 15px;
+    }
+
+    #featured_videos {
+      width: (@smallwidth);
+      //height: 50px;
+      overflow: hidden;
+      //background-color: red;
+
+      #video-1, #video-2 {
+        margin-right: 45px;
+      }
+
+      .featured_video {
+        width: ((@smallwidth / 3) - 36px);
+        height: (((@smallwidth / 3) - 36px) * 9 / 16);
+        float: left;
+        border: 3px solid @bordercolor;
+      }
+    }
+
+    #upcoming_gigs {
+      margin-top: 45px;
+      min-height: 50px;
+      border: 3px solid @bordercolor;
+      margin-bottom: 25px;
+    }
+
+    .content_box_container {
+      width: @contentboxcontainerwidth;
+      margin: auto;
+
+      #instagram_wall {
+        .il-photo__img {
+          width: (@contentboxcontainerwidth / 2 - 46);
+          height: (@contentboxcontainerwidth / 2 - 46);
+          float: left;
+        }
+
+        .il-photo__meta {
+          color: white;
+          a {
+            color: #ffeedd;
+          }
+          //height: (@contentboxcontainerwidth / 2 - 46);
+          position: relative;
+          top: -20px;
+        }
+      }
+
+      #cd_box {
+        img {
+          width: (@contentboxcontainerwidth / 2 - 46);
+          height: (@contentboxcontainerwidth / 2 - 46);
+        }
+      }
+
+      .content_box {
+        width: (@contentboxcontainerwidth / 2 - 46);
+        height: (@contentboxcontainerwidth / 2 - 46);
+        border: 3px solid @bordercolor;
+        float: left;
+        margin: 20px;
+      }
+
+      #bandbild {
+        width: @contentboxcontainerwidth;
+        //height: (@contentboxcontainerwidth * 2 / 3)
+      }
+
+      #bandnames {
+        .bandname {
+          width: (@contentboxcontainerwidth / 4);
+          float: left;
+          text-align: center;
+        }
+      }
+
+      #bandinfo {
+        clear: both;
+        width: (@contentboxcontainerwidth - 20);
+        padding: 10px;
+        text-align: justify;
+      }
+
+
+      .bigcartel-product {
+        text-align: center;
+        border: 3px solid black;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        .bigcartel-title {
+          font-size: 30px;
+          padding-top: 15px;
+        }
+
+        .bigcartel-content {
+          .bigcartel-image {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+  }
+
+  .trenner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    clear: both;
+    height: 50px;
+
+    .middle_schleife {
+      height: 50px;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    .footer_line {
+      height: 6px;
+      float: left;
+      background-color: @bordercolor;
+      margin-top: 22px;
+      .round_corners;
+    }
+
+    .social {
+      text-align: center;
+    }
+
+    .impressium {
+      text-align: center;
+    }
+  }
+}
+
+/*.dreieck {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 300px solid black;
+  border-bottom: 6px solid transparent;
+}*/
+
+/*
+.fernseher {
+  position: relative;
+  width: @smallwidth;
+  height: (@smallwidth * 3 / 4);
+  margin: 20px 0;
+  background-color: black;
+  border-radius: 50% 20% 50% 20%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+}
+
+.fernseher:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5% / 50%;
+}*/
