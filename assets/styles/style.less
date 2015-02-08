@@ -80,11 +80,13 @@ a {
   }
 
   #menu {
-    height: 50px;
+    min-height: 50px;
     margin-bottom: 15px;
+    overflow: hidden;
 
-    #menu_container {
+    #menu_container, #admin_menu_container {
       margin: auto;
+
       width: @smallwidth;
       height: 50px;
       //border: 1px solid @bordercolor;
@@ -268,34 +270,25 @@ a {
   }
 }
 
-/*.dreieck {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 300px solid black;
-  border-bottom: 6px solid transparent;
-}*/
-
-/*
-.fernseher {
-  position: relative;
-  width: @smallwidth;
-  height: (@smallwidth * 3 / 4);
-  margin: 20px 0;
-  background-color: black;
-  border-radius: 50% 20% 50% 20%;
-  color: white;
-  text-align: center;
-  text-indent: .1em;
+#messageboxcontainer {
+  width: (@smallwidth - 16);
+  background-color: #ffffff;
+  border: 3px solid black;
+  overflow: hidden;
+  padding: 5px;
 }
 
-.fernseher:before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  right: -5%;
-  left: -5%;
-  background: inherit;
-  border-radius: 5% / 50%;
-}*/
+div.jGrowl div.good {
+  background-color: #ccffcc;
+  color: navy;
+}
+
+div.jGrowl div.bad {
+  background-color: #FFcccc;
+  color: navy;
+}
+
+div.jGrowl div.debug {
+  background-color: #FFbb88;
+  color: navy;
+}

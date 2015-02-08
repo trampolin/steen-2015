@@ -50,15 +50,18 @@ a:active {
   height: 150px;
 }
 #everything #menu {
-  height: 50px;
+  min-height: 50px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
-#everything #menu #menu_container {
+#everything #menu #menu_container,
+#everything #menu #admin_menu_container {
   margin: auto;
   width: 630px;
   height: 50px;
 }
-#everything #menu #menu_container .menu_item {
+#everything #menu #menu_container .menu_item,
+#everything #menu #admin_menu_container .menu_item {
   float: left;
   height: 40px;
   width: 200px;
@@ -67,7 +70,8 @@ a:active {
   text-transform: uppercase;
   background-color: #dddddd;
 }
-#everything #menu #menu_container .menu_item a {
+#everything #menu #menu_container .menu_item a,
+#everything #menu #admin_menu_container .menu_item a {
   display: block;
   height: 100%;
   text-decoration: none;
@@ -76,10 +80,12 @@ a:active {
   padding-top: 3px;
   font-weight: bold;
 }
-#everything #menu #menu_container .menu_item:hover {
+#everything #menu #menu_container .menu_item:hover,
+#everything #menu #admin_menu_container .menu_item:hover {
   background-color: #bbbbbb;
 }
-#everything #menu #menu_container:after {
+#everything #menu #menu_container:after,
+#everything #menu #admin_menu_container:after {
   clear: both;
 }
 #everything #content #current_video {
@@ -193,33 +199,22 @@ a:active {
 #everything .trenner .impressium {
   text-align: center;
 }
-/*.dreieck {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 300px solid black;
-  border-bottom: 6px solid transparent;
-}*/
-/*
-.fernseher {
-  position: relative;
-  width: @smallwidth;
-  height: (@smallwidth * 3 / 4);
-  margin: 20px 0;
-  background-color: black;
-  border-radius: 50% 20% 50% 20%;
-  color: white;
-  text-align: center;
-  text-indent: .1em;
+#messageboxcontainer {
+  width: 614px;
+  background-color: #ffffff;
+  border: 3px solid black;
+  overflow: hidden;
+  padding: 5px;
 }
-
-.fernseher:before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  right: -5%;
-  left: -5%;
-  background: inherit;
-  border-radius: 5% / 50%;
-}*/
+div.jGrowl div.good {
+  background-color: #ccffcc;
+  color: navy;
+}
+div.jGrowl div.bad {
+  background-color: #FFcccc;
+  color: navy;
+}
+div.jGrowl div.debug {
+  background-color: #FFbb88;
+  color: navy;
+}

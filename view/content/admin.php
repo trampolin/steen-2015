@@ -1,7 +1,33 @@
-<?php function getAdmin($user) { ?>
-    <div class="content_box_container">
+<?php function getAdmin($user) {
+    require_once(ROOT_DIR.'/view/content/venues.php');
+    require_once(ROOT_DIR.'/view/content/gigs.php');
+
+
+    $mode = isset($_GET['m']) ? $_GET['m'] : null;
+    ?>
+    <div id="admin_content" class="content_box_container">
         <?php if($user->isUserLoggedIn()) : ?>
-            Logged in
+
+            <?php
+
+            if($mode == 'overview' || $mode == null) { ?>
+                <p>Eingetragene Venues:<?php $vi = new VenueInterface(); echo $vi->countRecords()->data;?></p>
+                <p>Eingetragene Gigs:<?php $vi = new GigInterface(); echo $vi->countRecords()->data;?></p>
+                <p>Eingetragene Videos:<?php $vi = new VideoInterface(); echo $vi->countRecords()->data;?></p>
+            <?php
+
+            } else if ($mode == 'venues') {
+                getVenues();
+            } else if ($mode == 'gigs') {
+                getGigs();
+            } else if ($mode == 'videos') {
+
+            } else { ?>
+                <p>Mode not found!</p>
+            <?php }
+
+            ?>
+
         <?php else:
             if (isset($user)) {
                 if ($user->errors) {

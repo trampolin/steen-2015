@@ -3,9 +3,11 @@
 define("ROOT_DIR", "../..");
 
 require_once("responseTypes.php");
-require_once(ROOT_DIR."/bin/database.php");
+require_once(ROOT_DIR."/classes/database/database.php");
 require_once(ROOT_DIR."/classes/interfaces/basicInterface.php");
 require_once(ROOT_DIR."/classes/interfaces/venueInterface.php");
+require_once(ROOT_DIR."/classes/interfaces/gigInterface.php");
+require_once(ROOT_DIR."/classes/interfaces/videoInterface.php");
 
 
 function handleRequest() {
