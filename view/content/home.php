@@ -1,19 +1,45 @@
 <?php function getHome() { ?>
-	<div id="current_video">
-		<iframe width="100%" height="100%" src="//www.youtube.com/embed/h6ilv5udZ08" frameborder="0" allowfullscreen=""></iframe>
-	</div>
 
-	<div id="featured_videos">
-		<div id="video-1" class="featured_video"><iframe width="100%" height="100%" src="//www.youtube.com/embed/S-EJNmlUfwQ" frameborder="0" allowfullscreen=""></iframe></div>
-		<div id="video-2" class="featured_video"><iframe width="100%" height="100%" src="//www.youtube.com/embed/xE3Zh24O-7Q" frameborder="0" allowfullscreen=""></iframe></div>
-		<div id="video-3" class="featured_video"><iframe width="100%" height="100%" src="//www.youtube.com/embed/cX_aineGzLY" frameborder="0" allowfullscreen=""></iframe></div>
+	<?php
+	$gi = new GigInterface();
+	$gigs = $gi->getRows(['join' => 'venues on venues.id = gigs.venue_id']);
+	?>
+
+	<div id="current_video" class="flexslider">
+		<ul class="slides">
+			<li data-description="Fiesta Gallery" data-thumb="http://img.youtube.com/vi/h6ilv5udZ08/mqdefault.jpg">
+				<div id="video-1" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/h6ilv5udZ08?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+			<li data-thumb="http://img.youtube.com/vi/S-EJNmlUfwQ/mqdefault.jpg">
+				<div id="video-2" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/S-EJNmlUfwQ?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+			<li data-thumb="http://img.youtube.com/vi/xE3Zh24O-7Q/mqdefault.jpg">
+				<div id="video-3" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/xE3Zh24O-7Q?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+			<li data-thumb="http://img.youtube.com/vi/cX_aineGzLY/mqdefault.jpg">
+				<div id="video-4" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/cX_aineGzLY?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+		</ul>
 	</div>
 
 	<div style="clear: both"></div>
 
 	<div id="upcoming_gigs">
-		Die nächsten Gigs
+
 	</div>
+
+	<script type="text/javascript">
+		var venueCollection = new EntityCollection(<?= json_encode($gigs->data); ?>,Gig,'Nächste Gigs:');
+		$('#upcoming_gigs').append(venueCollection.render());
+	</script>
 
 	<div class="content_box_container">
 
@@ -29,13 +55,29 @@
 				list: false,
 				urls: true
 			});
+
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+					animation: "slide",
+					controlNav: "thumbnails",
+					slideshow: false,
+					before: function(){
+						for (var i = 1; i<=4; i++) {
+							callPlayer('video-'+i,'pauseVideo');
+						}
+
+
+					}
+				});
+			});
+			//callPlayer('video-1', 'playVideo');
 		</script>
 		<!--div id="cd_box" class="content_box">
 			<a href="http://steen.bigcartel.com/" target="_blank"><img src="assets/img/impuls_der_zeit.jpg"></a>
 		</div-->
 
 		<div id="last_news" class="last_news content_box">
-			news
+			<img src="<?= ROOT_DIR?>/assets/img/wolf.jpg">
 		</div>
 	</div>
 

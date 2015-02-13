@@ -10,6 +10,10 @@ function Venue(row) {
             text: this.row.venuename
         });
     };
+
+    this.renderFrontend = function() {
+        return this.render();
+    };
 }
 
 Venue.inheritsFrom(BaseEntity);

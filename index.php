@@ -10,6 +10,7 @@ require_once("config/db.php");
 require_once("view/components/menu.php");
 require_once("view/components/header.php");
 require_once("view/components/trenner.php" );
+require_once("view/components/social.php" );
 require_once("view/content/home.php");
 require_once("view/content/band.php");
 require_once("view/content/shop.php");
@@ -41,6 +42,7 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 	<link rel="stylesheet" href="assets/styles/jquery.jgrowl.css" />
 	<link rel="stylesheet" href="assets/font-awesome-4.3.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="js/instagram-lite/src/css/style.css" />
+	<link rel="stylesheet" href="js/FlexSlider-master/flexslider.css" />
 
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
@@ -55,8 +57,14 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 	<script src="js/classes/gig.js" type="text/javascript"></script>
 	<script src="js/classes/entityCollection.js" type="text/javascript"></script>
 	<script src="js/instagram-lite/src/instagramLite.js" type="text/javascript"></script>
+	<script src="js/FlexSlider-master/jquery.flexslider.js" type="text/javascript"></script>
+	<script src="js/stellar.js-master/jquery.stellar.min.js" type="text/javascript"></script>
+	<script src="js/videocontrol.js" type="text/javascript"></script>
 </head>
 <body>
+
+<!--div style="position: absolute; bottom: 0px; left: 0px; width: 100%; height: 100px; background: #eee; z-index: -1" data-stellar-ratio="0.5"></div-->
+
 <a id="top" name="top"></a>
 <div id="everything">
 	<?php getHeader(); ?>
@@ -82,6 +90,7 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 
 	<?php
 		getTrenner();
+		getSocial();
 
 		if ($user->isUserLoggedIn()) : ?>
 			<a href="?p=admin">Admin</a>
@@ -97,6 +106,7 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 		}, 500);
 		return false;
 	});
+	//$.stellar();
 </script>
 </body>
 </html>

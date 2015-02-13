@@ -25,6 +25,10 @@ div {
   letter-spacing: 0.0625em;
 }
 
+body {
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: @linkcolor;
@@ -46,6 +50,9 @@ a {
 
 #everything {
   width: @smallwidth;
+  padding: 20px;
+  //background-color: #ffffff;
+  //z-index: 100;
 
   .trenner {
     .footer_line {
@@ -129,6 +136,15 @@ a {
       width: (@smallwidth - 6);
       height: (@smallwidth * 9 / 16 - 6);
       margin-bottom: 15px;
+
+      .flex-control-nav {
+        background-color: #ffffff;
+      }
+    }
+
+    .video-slide {
+      width: (@smallwidth - 6);
+      height: (@smallwidth * 9 / 16 - 6);
     }
 
     #featured_videos {
@@ -152,8 +168,11 @@ a {
     #upcoming_gigs {
       margin-top: 45px;
       min-height: 50px;
-      border: 3px solid @bordercolor;
+      //border: 3px solid @bordercolor;
       margin-bottom: 25px;
+      text-align: center;
+
+      font-size: 30px;
     }
 
     .content_box_container {
@@ -210,7 +229,8 @@ a {
         clear: both;
         width: (@contentboxcontainerwidth - 20);
         padding: 10px;
-        text-align: justify;
+        text-align: center;
+        //text-align: justify;
       }
 
 
@@ -268,6 +288,22 @@ a {
       text-align: center;
     }
   }
+
+  .social_container {
+    text-align: center;
+
+    /*font-size: 48px;
+    line-height: 68px;
+    i {
+      text-align: center;
+      width: 68px;
+      height:68px;
+      display: inline-block;
+      background-color: red;
+
+      //padding: 5px;
+    }*/
+  }
 }
 
 #messageboxcontainer {
@@ -291,4 +327,18 @@ div.jGrowl div.bad {
 div.jGrowl div.debug {
   background-color: #FFbb88;
   color: navy;
+}
+
+.fa-epk {
+  //cursor: default;
+  position: absolute;
+  top: (5em / 8);
+  left: (5em / 11);
+  //width: (11em / 2);
+  //height: (6em / 8);
+  font-family: sans-serif;
+  font-size: (4em / 19);
+  font-weight: bold;
+  line-height: (1em);
+  //text-align: center;
 }

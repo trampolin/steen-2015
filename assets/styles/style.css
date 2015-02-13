@@ -11,6 +11,9 @@ div {
   font-family: "steen";
   letter-spacing: 0.0625em;
 }
+body {
+  padding: 0;
+}
 a {
   text-decoration: none;
   color: #000000;
@@ -27,6 +30,7 @@ a:active {
 }
 #everything {
   width: 630px;
+  padding: 20px;
 }
 #everything .trenner .footer_line {
   width: 257px;
@@ -94,6 +98,13 @@ a:active {
   height: 348.375px;
   margin-bottom: 15px;
 }
+#everything #content #current_video .flex-control-nav {
+  background-color: #ffffff;
+}
+#everything #content .video-slide {
+  width: 624px;
+  height: 348.375px;
+}
 #everything #content #featured_videos {
   width: 630px;
   overflow: hidden;
@@ -111,8 +122,9 @@ a:active {
 #everything #content #upcoming_gigs {
   margin-top: 45px;
   min-height: 50px;
-  border: 3px solid #000000;
   margin-bottom: 25px;
+  text-align: center;
+  font-size: 30px;
 }
 #everything #content .content_box_container {
   width: 560px;
@@ -154,7 +166,7 @@ a:active {
   clear: both;
   width: 540px;
   padding: 10px;
-  text-align: justify;
+  text-align: center;
 }
 #everything #content .content_box_container .bigcartel-product {
   text-align: center;
@@ -199,6 +211,20 @@ a:active {
 #everything .trenner .impressium {
   text-align: center;
 }
+#everything .social_container {
+  text-align: center;
+  /*font-size: 48px;
+    line-height: 68px;
+    i {
+      text-align: center;
+      width: 68px;
+      height:68px;
+      display: inline-block;
+      background-color: red;
+
+      //padding: 5px;
+    }*/
+}
 #messageboxcontainer {
   width: 614px;
   background-color: #ffffff;
@@ -217,4 +243,13 @@ div.jGrowl div.bad {
 div.jGrowl div.debug {
   background-color: #FFbb88;
   color: navy;
+}
+.fa-epk {
+  position: absolute;
+  top: 0.625em;
+  left: 0.45454545454545453em;
+  font-family: sans-serif;
+  font-size: 0.21052631578947367em;
+  font-weight: bold;
+  line-height: 1em;
 }

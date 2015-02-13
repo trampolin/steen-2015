@@ -22,7 +22,6 @@ function checkResult(response) {
     {
         return false;
     }
-
 }
 
 function showMessageBox(html) {
