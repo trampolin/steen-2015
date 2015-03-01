@@ -9,19 +9,21 @@
 			<div class="bandname">Ritsch</div>
 		</div>
 		<div id="bandinfo">
-			<span class="fa-stack fa-lg">
-			  <i class="fa fa-square-o fa-stack-2x"></i>
-			  <i class="fa fa-envelope fa-stack-1x"></i>
-			</span>
-			Kontakt via Mail
+			<a href="mailto:booking@steenband.de">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-envelope fa-stack-1x"></i>
+				</span>booking@steenband.de
+			</a>
 
 			&nbsp;&nbsp;&nbsp;
 
-			<span class="fa-stack fa-lg">
-			  <i class="fa fa-square-o fa-stack-2x"></i>
-			  <i class="fa fa-info fa-stack-1x"></i>
-			</span>
-			EPK download
+			<a href="http://www.steenband.de/booking/steen_EPK_2015.pdf">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-info fa-stack-1x"></i>
+				</span>EPK download
+			</a>
 
 			&nbsp;&nbsp;&nbsp;
 

@@ -68,9 +68,11 @@ abstract class BasicInterface {
 
 		$group = (array_key_exists('group',$data) ? ' GROUP BY '.$data['group'] : '');
 
-		$order = (array_key_exists('order',$data) ? ' ORDER BY '.$data['order'] : '');
+        $order = (array_key_exists('order',$data) ? ' ORDER BY '.$data['order'] : '');
 
-		$q = $select.$join.$where.$group.$order;
+        $limit = (array_key_exists('limit',$data) ? ' LIMIT '.$data['limit'] : '');
+
+		$q = $select.$join.$where.$group.$order.$limit;
 
 		$result = $this->db->query($q);
 

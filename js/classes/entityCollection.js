@@ -7,7 +7,7 @@ function EntityCollection(rows,entitiyType,title) {
     var that = this;
 
     $.each(rows, function(i, row) {
-        that.rows['id_'+row.id] = new entitiyType(row);
+        that.rows[i] = new entitiyType(row);
     });
 
     this.render = function(frontend) {
