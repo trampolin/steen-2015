@@ -46,8 +46,10 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 
+    <script src="js/xdate.js" type="text/javascript"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript"></script>
 	<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+	<script src="js/yt.pretty.embed.js" type="text/javascript"></script>
 	<script src="js/jquery.bpopup.min.js" type="text/javascript"></script>
 	<script src="js/jquery.jgrowl.js" type="text/javascript"></script>
 	<script src="js/controller.js" type="text/javascript"></script>

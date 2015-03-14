@@ -51,7 +51,7 @@ a:active {
   display: block;
 }
 #everything #header a #headerimg {
-  height: 150px;
+  height: 180px;
 }
 #everything #menu {
   min-height: 50px;
@@ -121,7 +121,6 @@ a:active {
 }
 #everything #content #upcoming_gigs {
   margin-top: 45px;
-  min-height: 50px;
   margin-bottom: 25px;
   text-align: center;
   font-size: 30px;
@@ -252,4 +251,13 @@ div.jGrowl div.debug {
   font-size: 0.21052631578947367em;
   font-weight: bold;
   line-height: 1em;
+}
+.entity_collection_title {
+  font-weight: bold;
+}
+.entity-collection-entitiy {
+  margin-top: 10px;
+}
+.entity-collection-entitiy a:hover {
+  color: orange;
 }

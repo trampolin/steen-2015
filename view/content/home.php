@@ -2,7 +2,11 @@
 
 	<?php
 	$gi = new GigInterface();
-	$gigs = $gi->getRows(['join' => 'venues on venues.id = gigs.venue_id']);
+	$gigs = $gi->getRows([
+        'join' => 'venues on venues.id = gigs.venue_id',
+        'limit' => 5,
+        'order' => 'date ASC',
+        'where' => 'date >= DATE(NOW()) AND active=1']);
 	?>
 
 	<div id="current_video" class="flexslider">
@@ -38,7 +42,7 @@
 
 	<script type="text/javascript">
 		var venueCollection = new EntityCollection(<?= json_encode($gigs->data); ?>,Gig,'Nächste Gigs:');
-		$('#upcoming_gigs').append(venueCollection.render());
+		$('#upcoming_gigs').append(venueCollection.render(true));
 	</script>
 
 	<div class="content_box_container">
@@ -48,13 +52,7 @@
 		</div>
 
 		<script type="text/javascript">
-			$('#instagram_wall').instagramLite({
-				clientID: 'dd33442b9c334365a10d3393df4a3fdd',
-				username: 'steenband',
-				limit: 1,
-				list: false,
-				urls: true
-			});
+
 
 			$(window).load(function() {
 				$('.flexslider').flexslider({
@@ -69,6 +67,28 @@
 
 					}
 				});
+
+                $('#instagram_wall').instagramLite({
+                    clientID: 'dd33442b9c334365a10d3393df4a3fdd',
+                    username: 'steenband',
+                    limit: 1,
+                    list: false,
+                    urls: true,
+                    error: function(errorCode, errorMessage) {
+
+                        console.log('There was an error');
+
+                        if(errorCode && errorMessage) {
+
+                            alert(errorCode +': '+ errorMessage);
+
+                        }
+
+                    },
+                    success: function() {
+                        console.log('The request was successful!');
+                    }
+                });
 			});
 			//callPlayer('video-1', 'playVideo');
 		</script>

@@ -27,11 +27,13 @@
 
 			&nbsp;&nbsp;&nbsp;
 
-			<span class="fa-stack fa-lg">
-			  <i class="fa fa-square-o fa-stack-2x"></i>
-			  <i class="fa fa-picture-o fa-stack-1x"></i>
-			</span>
-			Pressefotos
+            <a href="/assets/img/bandbild.jpg">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-picture-o fa-stack-1x"></i>
+                </span>
+                Pressefotos
+            </a>
 		</div>
 
 

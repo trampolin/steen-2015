@@ -4,6 +4,7 @@
 function EntityCollection(rows,entitiyType,title) {
     this.rows = {};
     this.title = title;
+    this.hideIfEmpty = true;
     var that = this;
 
     $.each(rows, function(i, row) {
@@ -32,7 +33,9 @@ function EntityCollection(rows,entitiyType,title) {
             });
         }
 
-
+        if (Object.keys(this.rows).length == 0 && this.hideIfEmpty) {
+            return '';
+        }
 
         return div;
     }
