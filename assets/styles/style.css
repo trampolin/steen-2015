@@ -125,6 +125,14 @@ a:active {
   text-align: center;
   font-size: 30px;
 }
+#everything #content #hiwyhi {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#everything #content #hiwyhi img {
+  width: 100%;
+}
 #everything #content .content_box_container {
   width: 560px;
   margin: auto;

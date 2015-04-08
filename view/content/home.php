@@ -36,7 +36,10 @@
 
 	<div style="clear: both"></div>
 
-	<div id="upcoming_gigs">
+    <div id="hiwyhi">supported by:<a href="http://www.homeiswhereyourheartis.de/artist_steen_de.html" target="_blank"><img src="assets/img/HIWYHI_OVER.svg" /></a></div>
+
+
+    <div id="upcoming_gigs">
 
 	</div>
 
