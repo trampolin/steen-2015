@@ -11,33 +11,40 @@
 
 	<div id="current_video" class="flexslider">
 		<ul class="slides">
-			<li data-description="Fiesta Gallery" data-thumb="http://img.youtube.com/vi/h6ilv5udZ08/mqdefault.jpg">
+			<li data-thumb="http://img.youtube.com/vi/T2K12PhGDBs/mqdefault.jpg">
 				<div id="video-1" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/T2K12PhGDBs?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+			<li data-thumb="http://img.youtube.com/vi/gcAp86JsLmQ/mqdefault.jpg">
+				<div id="video-2" class="video-slide">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/gcAp86JsLmQ?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+			</li>
+			<li data-thumb="http://img.youtube.com/vi/h6ilv5udZ08/mqdefault.jpg">
+				<div id="video-3" class="video-slide">
 					<iframe width="100%" height="100%" src="//www.youtube.com/embed/h6ilv5udZ08?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
 				</div>
 			</li>
 			<li data-thumb="http://img.youtube.com/vi/S-EJNmlUfwQ/mqdefault.jpg">
-				<div id="video-2" class="video-slide">
+				<div id="video-4" class="video-slide">
 					<iframe width="100%" height="100%" src="//www.youtube.com/embed/S-EJNmlUfwQ?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
 				</div>
 			</li>
-			<li data-thumb="http://img.youtube.com/vi/xE3Zh24O-7Q/mqdefault.jpg">
-				<div id="video-3" class="video-slide">
+			<!--li data-thumb="http://img.youtube.com/vi/xE3Zh24O-7Q/mqdefault.jpg">
+				<div id="video-5" class="video-slide">
 					<iframe width="100%" height="100%" src="//www.youtube.com/embed/xE3Zh24O-7Q?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
 				</div>
-			</li>
-			<li data-thumb="http://img.youtube.com/vi/cX_aineGzLY/mqdefault.jpg">
-				<div id="video-4" class="video-slide">
+			</li-->
+			<!--li data-thumb="http://img.youtube.com/vi/cX_aineGzLY/mqdefault.jpg">
+				<div id="video-6" class="video-slide">
 					<iframe width="100%" height="100%" src="//www.youtube.com/embed/cX_aineGzLY?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
 				</div>
-			</li>
+			</li-->
 		</ul>
 	</div>
 
 	<div style="clear: both"></div>
-
-    <div id="hiwyhi">supported by:<a href="http://www.homeiswhereyourheartis.de/artist_steen_de.html" target="_blank"><img src="assets/img/HIWYHI_OVER.svg" /></a></div>
-
 
     <div id="upcoming_gigs">
 
@@ -48,11 +55,13 @@
 		$('#upcoming_gigs').append(venueCollection.render(true));
 	</script>
 
-	<div class="content_box_container">
 
-		<div id="instagram_wall" class="content_box">
 
-		</div>
+	<!--div class="content_box_container"-->
+
+		<!--div id="instagram_wall" class="content_box">
+
+		</div-->
 
 		<script type="text/javascript">
 
@@ -71,7 +80,7 @@
 					}
 				});
 
-                $('#instagram_wall').instagramLite({
+                /*$('#instagram_wall').instagramLite({
                     clientID: 'dd33442b9c334365a10d3393df4a3fdd',
                     username: 'steenband',
                     limit: 1,
@@ -91,7 +100,7 @@
                     success: function() {
                         console.log('The request was successful!');
                     }
-                });
+                });*/
 			});
 			//callPlayer('video-1', 'playVideo');
 		</script>
@@ -99,9 +108,9 @@
 			<a href="http://steen.bigcartel.com/" target="_blank"><img src="assets/img/impuls_der_zeit.jpg"></a>
 		</div-->
 
-		<div id="last_news" class="last_news content_box">
+		<!--div id="last_news" class="last_news content_box">
 			<img src="<?= ROOT_DIR?>/assets/img/wolf.jpg">
 		</div>
-	</div>
+	</div-->
 
 <?php }

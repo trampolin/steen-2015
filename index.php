@@ -38,6 +38,8 @@ $user = new Login();
 $site = isset($_GET['p']) ? $_GET['p'] : null;
 ?>
 <head>
+    <title>STEEN - #wiediewölfe</title>
+
 	<link rel="stylesheet" href="assets/styles/style.css" />
 	<link rel="stylesheet" href="assets/styles/jquery.jgrowl.css" />
 	<link rel="stylesheet" href="assets/font-awesome-4.3.0/css/font-awesome.min.css" />
@@ -45,6 +47,8 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 	<link rel="stylesheet" href="js/FlexSlider-master/flexslider.css" />
 
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
 
     <script src="js/xdate.js" type="text/javascript"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript"></script>
@@ -68,6 +72,7 @@ $site = isset($_GET['p']) ? $_GET['p'] : null;
 <!--div style="position: absolute; bottom: 0px; left: 0px; width: 100%; height: 100px; background: #eee; z-index: -1" data-stellar-ratio="0.5"></div-->
 
 <a id="top" name="top"></a>
+<div id="hiwyhi">supported by:<a href="http://www.homeiswhereyourheartis.de/artist_steen_de.html" target="_blank"><img src="assets/img/HIWYHI_OVER.svg" /></a></div>
 <div id="everything">
 	<?php getHeader(); ?>
 	<?php getMenu($site,$user); ?>

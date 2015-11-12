@@ -28,5 +28,12 @@
               <i class="fa fa-spotify fa-stack-1x"></i>
             </span>
         </a>
+
+        <a href="https://soundcloud.com/steenband" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-soundcloud fa-stack-1x"></i>
+            </span>
+        </a>
     </div>
 <?php }
